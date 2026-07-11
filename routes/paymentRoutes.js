@@ -18,8 +18,8 @@ router.post("/create-checkout-session", async (req, res) => {
       payment_method_types: ["card"],
       mode: "payment",
       line_items: lineItems,
-      success_url: `http://localhost:5173/payment-success?orderId=${orderId}`,
-      cancel_url: `http://localhost:5173/payment-cancel`,
+      success_url: `https://gj21-cafe.vercel.app/payment-success?orderId=${orderId}`,
+      cancel_url: `https://gj21-cafe.vercel.app/payment-cancel`,
     });
     res.json({ url: session.url });
   } catch (err) {
